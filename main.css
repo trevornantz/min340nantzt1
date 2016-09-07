@@ -1,0 +1,143 @@
+html {
+    background: #e6e9e9;
+    background-image;
+    opacity: .7;
+    linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+    -webkit-font-smoothing: antialiased;
+    @keyframes example {
+    from {background-color: black;}
+    to {background-color: gray;}
+}
+
+body {
+    background: #000;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+
+    line-height: 1.5;
+    margin:  auto;
+    max-width: 625px;
+    padding: 2em 2em 4em;
+}
+
+h1 { color:#000;
+    text-align: left;
+    padding-left: 150px;
+    padding-top: 45px;
+    
+
+   }
+@font-face
+     
+ {
+          font-family:"Anothershabby_trial";
+          src: url("another_shabby/Anothershabby_trial.ttf")
+    }
+h1{font-family: "Anothershabby_trial","Arial","Sans-serif";
+text-decoration:underline;
+font-size: 50px;
+}
+
+
+h2{ color:#989;
+    font-weight: 700;
+    text-align: center;
+    object-position: top;}
+
+h3{color:#000;
+   font-weight:700;
+   text-align: center}
+
+, h4, h5, h6 {
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 20px
+}
+p{
+     color: ##B22D26;
+    font-weight: 600;
+    line-height: 1.3;
+    padding-left: 30px;
+    ;
+}
+
+h2 {
+    margin-top: 1.3em;
+    color: #100
+}
+h6 {font-family: "Lucida Console"," Courier new",monospace;
+color:rgba(204,51,255)}
+
+a {
+    color: #336;
+}
+
+b, strong {
+    font-weight: 400;
+}
+#textinfo {
+    display:block;
+    color:#000;
+    margin-top: px;
+    padding-left: 25px;
+    padding-right: 10px;
+    width:400px;
+    -webkit-transform: translate3D (0,0,2);
+    font-weight: bold
+    
+}
+
+#black {
+   
+    height:925px;
+    width: 575px;
+    top:0px;
+    font-weight: bold;
+    
+    
+    
+    
+    -webkit-transform: translate3D (0,0,1);
+    
+}
+#picture {
+    
+    background-image: url(TrevorBass.jpg);
+    background-repeat:no-repeat;
+    width:625px;
+    height:950px;
+    
+}
+
+
+
+
+img {
+    -webkit-animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+            animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+    background: transparent;
+    border: 10px solid rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    display: block;
+    margin: 1.3em auto;
+    max-width: 95%;
+}
+
+
+@-webkit-keyframes colorize {
+    0% {
+        -webkit-filter: grayscale(100%);
+    }
+    100% {
+        -webkit-filter: grayscale(0%);
+    }
+}
+
+@keyframes colorize {
+    0% {
+        filter: grayscale(100%);
+    }
+    100% {
+        filter: grayscale(0%);
+    }
+}
