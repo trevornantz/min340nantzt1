@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+    </head>
+    <style>
+        #stage {
+            position:relative;
+            width:300px;
+            height:300px;
+            
+            
+        }
+        #zone {
+            position:absolute;
+            width:300px;
+            height:300px;
+            
+            top:0px;
+            left:0px;
+         
+            background-color: antiquewhite;
+        }
+        
+        #fly {
+            position:absolute;
+            width:40px;
+            height:40px;
+            top:0px;
+            left:0px;
+            
+            background-image:url("flyGuy40X40.png");
+        }
+        
+        
+         #searchbeamX1 {
+            position:absolute;
+            width:300px;
+            height:40px;
+            
+            top:0px;
+            left:0px;
+            
+            background-color: rgba(255,0,0,0.5);
+        }
+        
+         #searchbeamY1 {
+            position:absolute;
+            width:40px;
+            height:300px;
+            
+            top:0px;
+            left:0px;
+            
+            background-color: rgba(255,0,0,0.5);
+        }
+        #output {
+            position:absolute;
+            top:320px;
+        
+        }
+        
+        #inputX {
+            position:absolute;
+            width:180px;
+            top:350px;
+            margin: 10px;
+        }
+        
+        #inputY {
+            position:absolute;
+            width:180px;
+            top:350px;
+            left:200px;
+            margin: 10px;
+        }
+        
+        #inputX1 {
+            position:absolute;
+            width:180px;
+            top:500px;
+            margin: 10px;
+        }
+        
+        #inputY1 {
+            position:absolute;
+            width:180px;
+            top:500px;
+            left:200px;
+            margin: 10px;
+        }
+        
+        #input {
+            position:absolute;
+            width:180px;
+            top:400px;
+            left:0px;
+            margin: 10px;
+        }
+        
+        #guess {
+            position:absolute;
+            top:370px;
+            width:300px;
+            margin:10px;
+            
+        }
+        
+        #searchbox {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:40px;
+            height: 40px;
+            
+            background-color: red;
+        }
+    </style>
+    <body>
+        <div id="stage">
+        <div id="zone"> </div>
+        <div id="fly"> </div>
+        <div id="searchbeamX1"> </div>
+        <div id="searchbeamY1"> </div>
+        
+        
+        </div>
+        
+       
+        <div id="output" > Enter a number between 0 and 280...
+    </div>
+        
+        <input id="inputX" type="text" placeholder="enter your X-coordinate"/>
+        <input id="inputY" type="text" placeholder="enter your Y-coordinate"/>
+        
+        <button id="guess">Guess</button>
+        
+        
+    </body>
+    
+    
+    <script>
+        var myFly=document.querySelector("#fly");
+        var myRandomX= Math.ceil(Math.random()* 280);
+        var myRandomY= Math.ceil(Math.random()* 280);
+        var mySearchBeamX= document.querySelector("#searchbeamX1");
+        var mySearchBeamY= document.querySelector("#searchbeamY1");
+        var myInputX=document.querySelector("#inputX");
+        var myInputY=document.querySelector("#inputY");
+        //var shotsRemaining = 4;
+        //var shotsMade = 0;
+        //var gameState= " ";
+        //var myInput = document.querySelector("#input");
+        //var myInputX1= document.querySelector("#inputX1");
+        //var myInputY1= document.querySelector("#inputY1");
+        var myGuessBTN= document.querySelector("#guess");
+        
+        //var gameWon= false;
+        myGuessBTN.addEventListener("click", playGame, false);
+        
+        //var searchBeam = document.querySelector("#searchbox");
+        
+        //searchBeam.style.top = 50 + "px";
+        //searchBeam.style.left = 50 + "px";
+        
+       var myOut = document.querySelector("#output");
+       // myOut.innerHTML = myInput.value;
+        //myOut.innerHTML = myInput.value;
+
+        myFly.style.top = myRandomY + "px";
+        myFly.style.left = myRandomX + "px";
+        
+           // var userX = myInputX.value;
+           // var userY = myInputY.value;
+        
+        function playGame(){
+            
+            //shotsRemaining = shotsRemaining - 1;
+            //shotsMade = shotsMade + 1;
+            //gameState= "shots: "+ shotsMade + ", Remaining: " + shotsRemaining;
+            
+            //myInputX = parseInt(myInputX.value);
+            //myInputY = parseInt(myInputY.value);
+
+        //myOut.innerHTML = myInputX.value + " " + myInputY.value;
+        mySearchBeamY.style.left = myInputX.value + "px";
+           mySearchBeamX.style.top = myInputY.value + "px";
+            
+            // searchBeam.style.top = myInputX1.value + "px";
+         //searchBeam.style.left = myInputY1.value +"px";
+            
+            
+            //if(myInputX >= myFly && myInputX <= myFly + 20)
+            
+            //if(myInputY >= myFly && myInputY <= myFly + 20)
+            
+            
+               //gameWon = true;
+              // endGame();
+       // }
+           
+        
+         
+            //else if() 
+            //{output.innerHTML= "You are correct!" + "<br>";
+                //}
+           //else if {
+        
+            //output.innerHTML
+        //= "You are incorrect!" + "<br>";
+           //}
+        
+        
+  
+    
+        
+    //function endGame ()
+        //{
+            //if(gameWon)
+        //{
+         //output.innerHTML
+            //= "You are correct!" + "<br>"
+            //+ "It only took you" + shotsMade + " shots.";
+        //}
+            //else
+                //{ output.innerHTML
+                    //="You lost!" + "<br>"
+                //+"You are out of guesses!";
+                //}
+        }
+        
+    </script>
+</html>
+<!--
+
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[     CODE THE WEB     ]:::::]
+    [:::::[  http://brackets.io  ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+
+-->
